@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Enquiry View List</title>
+</head>
+<body style=" background-color: #e1feff;">
+    
+    <!--head-->
+    <nav class="navbar w-100 position-fixed bg-body-tertiary py-0" style="z-index: 3; top: 0;">
+        <div class="container-fluid bg-secondary">
+            <img style=" height: 50px; background-color: white;" src="./Assets/sdlc_logo.png">
+        </div>
+    </nav>
+    <section>
+        <ul class="navbar2 m-0 pe-5">
+            <li><a href="./index.html">LOGIN</a></li>
+            <li><a href="./Enquiry.html">ENQUIRY&nbsp;FORM</a></li>
+            <li><a href="./Enquiryviewlist.html">VIEW&nbsp;LIST</a></li>
+        </ul>
+    </section>
+
+    <section class="navbar3 bg-black container-fluid ">
+        <img class="menu_hide" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGxJREFUSEvtlcENwCAMA/FmjMZo3SxUlfgA/TmYhxnApxyOgiJ6EHGLwcfMW/WnOiIa0zmAJW+rOl4yGbxw7gIzp/3LcqtHqytTN4BnzrurXMp10qhm/q/XaRhwq7Vn0a3OMOCzmGF1mylT3QGvpigfXkEqFAAAAABJRU5ErkJggg==" />
+    </section>
+
+
+    <div class="left_content menu_content bg-black">
+        <li><a href="./Enquiry.html">Enquiry Form</a></li>
+        <li><a href="./Enquiryviewlist.html">Enquiry View List</a></li>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center position-fixed w-100" style="top: 130px; background-color: white;">
+        <p >Total Rows: <span id="rowCount">0</span></p>
+        <h2 class="text-black">Enquiry View List</h2>
+        <button class="clearFiltersBtn">Clear All Filters</button>
+    </div>
+
+    <!-- <div class="fixed-toolbar d-flex justify-content-between align-items-center px-4">
+        <p>Total Rows: <span id="rowCount">0</span></p>
+        <h1 class="text-black text-center m-0">Enquiry View List</h1>
+        <button class="clearFiltersBtn btn btn-light bg-secondary text-white">Clear All Filters</button>
+    </div> -->
+    
+
+    <section class="viewlist_content my-5">
+
+        <div class="view_list container-fluid overflow-x-scroll"  style="margin-top: 50px;">
+            <table id="enquiryTable">
+                <thead>
+                    <tr>
+                        <th>Enquiry&nbsp;Id</th>
+                        <th>Date&nbsp;of&nbsp;Enquiry</th>
+                        <th>Student&nbsp;name</th>
+                        <th>Moblie&nbsp;No</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Parent&nbsp;/&nbsp;Spouse&nbsp;Name</th>
+                        <th>Date&nbsp;of&nbsp;Birth</th>
+                        <th>Gender</th>
+                        <th>Occupation</th>
+                        <th>College&nbsp;Name</th>
+                        <th>Educational&nbsp;Qualification</th>
+                        <th>Degree</th>
+                        <th>Course</th>
+                        <th>Year&nbsp;of&nbsp;Passed&nbsp;out</th>
+                        <th>Course&nbsp;of&nbsp;Interested</th>
+                        <th>Placement&nbsp;Details</th>
+                        <th>Source&nbsp;of&nbsp;Reference</th>
+                        <th>Expected&nbsp;Date&nbsp;of&nbsp;Join</th>
+                        <th>Next&nbsp;Follow&nbsp;Up</th>
+                        <th>Registeration&nbsp;Status</th>
+                        <th>Stauts&nbsp;of&nbsp;File</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Data Rows -->
+                    <tr>
+                        <td>ENQ250419-01</td>
+                        <td>2025-10-01</td>
+                        <td>Michel Madhana Kama Rajan</td>
+                        <td>9876543210</td>
+                        <td>michelmadhan@gmail.com</td>
+                        <td>40/2 Rama Street, Kolaththur Main Road</td>
+                        <td>Erode-638004</td>
+                        <td>Mathu Mitha</td>
+                        <td>2000-05-02</td>
+                        <td>Male</td>
+                        <td>Tailor</td>
+                        <td>Nandha Arts and Science College</td>
+                        <td>Bachelor Degree</td>
+                        <td>BSc</td>
+                        <td>Custom Fashion Designing</td>
+                        <td>2021-05-28</td>
+                        <td>Python Development</td>
+                        <td>With Placement</td>
+                        <td>Instagram</td>
+                        <td>2025-11-15</td>
+                        <td>2025-10-15</td>
+                        <td>Registered</td>
+                        <td>Completed</td>
+                    </tr>
+
+                    <tr>
+                        <td>ENQ250419-01</td>
+                        <td>2025-10-01</td>
+                        <td>Michel Madhana Kama Rajan</td>
+                        <td>9876543210</td>
+                        <td>michelmadhan@gmail.com</td>
+                        <td>40/2 Rama Street, Kolaththur Main Road</td>
+                        <td>Erode-638004</td>
+                        <td>Mathu Mitha</td>
+                        <td>2000-05-02</td>
+                        <td>Male</td>
+                        <td>Tailor</td>
+                        <td>Nandha Arts and Science College</td>
+                        <td>Bachelor Degree</td>
+                        <td>BSc</td>
+                        <td>Custom Fashion Designing</td>
+                        <td>2021</td>
+                        <td>Python Development</td>
+                        <td>With Placement</td>
+                        <td>Instagram</td>
+                        <td>2025-11-15</td>
+                        <td>2025-10-15</td>
+                        <td>Registered</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>ENQ250419-02</td>
+                        <td>2025-09-12</td>
+                        <td>Priya Anandan</td>
+                        <td>9876512345</td>
+                        <td>priya.anandan@mail.com</td>
+                        <td>12 Gandhi Nagar, Salem</td>
+                        <td>Salem</td>
+                        <td>Anandan</td>
+                        <td>1999-12-10</td>
+                        <td>Female</td>
+                        <td>Student</td>
+                        <td>Govt. Arts College</td>
+                        <td>Post Graduate</td>
+                        <td>MSc</td>
+                        <td>Data Science</td>
+                        <td>2022</td>
+                        <td>Data Analytics</td>
+                        <td>No Placement</td>
+                        <td>Facebook</td>
+                        <td>2025-10-05</td>
+                        <td>2025-09-25</td>
+                        <td>Not Registered</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>ENQ250419-03</td>
+                        <td>2025-08-30</td>
+                        <td>Karthik M</td>
+                        <td>9867543210</td>
+                        <td>karthikm@gmail.com</td>
+                        <td>44, MG Road, Chennai</td>
+                        <td>Chennai</td>
+                        <td>Murugan</td>
+                        <td>1998-07-15</td>
+                        <td>Male</td>
+                        <td>Engineer</td>
+                        <td>Anna University</td>
+                        <td>Bachelor Degree</td>
+                        <td>BE</td>
+                        <td>Mechanical</td>
+                        <td>2020</td>
+                        <td>Python Development</td>
+                        <td>With Placement</td>
+                        <td>Friend</td>
+                        <td>2025-09-15</td>
+                        <td>2025-09-10</td>
+                        <td>Registered</td>
+                        <td>Completed</td>
+                    </tr>
+
+                    <tr>
+                        <td>ENQ250419-02</td>
+                        <td>2025-09-12</td>
+                        <td>Priya Anandan</td>
+                        <td>9876512345</td>
+                        <td>priya.anandan@mail.com</td>
+                        <td>12 Gandhi Nagar, Salem</td>
+                        <td>Salem</td>
+                        <td>Anandan</td>
+                        <td>1999-12-10</td>
+                        <td>Female</td>
+                        <td>Student</td>
+                        <td>Govt. Arts College</td>
+                        <td>Post Graduate</td>
+                        <td>MSc</td>
+                        <td>Data Science</td>
+                        <td>2022</td>
+                        <td>Data Analytics</td>
+                        <td>No Placement</td>
+                        <td>Facebook</td>
+                        <td>2025-10-05</td>
+                        <td>2025-09-25</td>
+                        <td>Not Registered</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>ENQ250419-03</td>
+                        <td>2025-08-30</td>
+                        <td>Karthik M</td>
+                        <td>9867543210</td>
+                        <td>karthikm@gmail.com</td>
+                        <td>44, MG Road, Chennai</td>
+                        <td>Chennai</td>
+                        <td>Murugan</td>
+                        <td>1998-07-15</td>
+                        <td>Male</td>
+                        <td>Engineer</td>
+                        <td>Anna University</td>
+                        <td>Bachelor Degree</td>
+                        <td>BE</td>
+                        <td>Mechanical</td>
+                        <td>2020</td>
+                        <td>Python Development</td>
+                        <td>With Placement</td>
+                        <td>Friend</td>
+                        <td>2025-09-15</td>
+                        <td>2025-09-10</td>
+                        <td>Registered</td>
+                        <td>Completed</td>
+                    </tr>
+                    <!-- More rows... -->
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="./msi.js"></script>
+
+</body>
+</html>
